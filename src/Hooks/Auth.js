@@ -1,10 +1,7 @@
 import { useState, useEffect, createContext, useContext, useMemo } from "react";
-// const urlEndpoint = process.env.REACT_APP_BACKEND;
+const urlEndpoint = process.env.REACT_APP_BACKEND;
 const AuthContext = createContext();
 
-/* 
-@Source: https://blog.logrocket.com/complete-guide-authentication-with-react-router-v6/#basic-routing-with-routes
-*/
 export const AuthProvider = ({ children }) => {
   const [userToken, setUserToken] = useState(null);
   const [userEmail, setUserEmail] = useState("");
@@ -12,8 +9,7 @@ export const AuthProvider = ({ children }) => {
 
   //didcomponentupdate
   useEffect(() => {
-    //get session data if session is still active from the browser
-    const userData = getLSUserData();
+    const userData = getLSUserData(); //get session data if session is still active from the browser
 
     //if isAuthLoading changes, set the setUserToken and setUserEmail
     if (userData && userData.token) {

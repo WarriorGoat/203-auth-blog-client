@@ -8,7 +8,7 @@ import LoginPage from "./Pages/LoginPage";
 import RegistrationPage from "./Pages/RegistrationPage";
 import "./App.css";
 
-const urlEndPoint = process.env.REACT_APP_BACKEND;
+// const urlEndPoint = process.env.REACT_APP_BACKEND;
 
 function App() {
   const [userMessage, setUserMessage] = useState("");
@@ -24,20 +24,28 @@ function App() {
         },
         {
           path: "/blog-form",
-          element: <BlogFormPage urlEndPoint={urlEndPoint} />,
+          element: <BlogFormPage 
+          // urlEndPoint={urlEndPoint} 
+          />,
         },
         {
-          index: true,
+          // index: true,
           path: "/list",
-          element: <BlogListPage urlEndPoint={urlEndPoint} />,
+          element: <BlogListPage 
+          // urlEndPoint={urlEndPoint} 
+          />,
         },
         {
           path: "/login",
-          element: <LoginPage />,
+          element: <LoginPage 
+          // urlEndPoint={urlEndPoint}
+          />,
         },
         {
           path: "/registration",
-          element: <RegistrationPage />,
+          element: <RegistrationPage 
+          // urlEndPoint={urlEndPoint}
+          />,
         },
       ],
     },

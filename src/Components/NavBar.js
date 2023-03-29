@@ -10,10 +10,12 @@ const NavBar = () => {
         <div className = "nav-bar">
             <h2>Blogger 2.0 </h2>
             <Link to="/"> Home   </Link> 
-            <Link to="/list"> List All   </Link>
-            <Link to="/blog-form"> Create New </Link>
-            <Link to="/registration"> Registration Form   </Link>
-            <Link to="/login"> Login Form   </Link>
+            <Link to="/login"> Login      </Link>
+            <Link to="/registration"> Registration New User   </Link>
+            <Link to="/list"> List Blogs   </Link>
+            <Link to="/blog-form"> Create Blog </Link>
+            
+            
             <button onClick={()=>{
                 auth.logout()
             }}>Logout</button>
